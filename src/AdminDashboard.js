@@ -56,8 +56,7 @@ const AdminDashboard = () => {
       </td>
     </tr>
   )}
-</tbody>
-              
+</tbody>   
             </tbody>
           </table>
         </section>
