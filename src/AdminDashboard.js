@@ -47,7 +47,17 @@ const AdminDashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {shipments.map(s => <WaybillRow key={s.id} shipment={s} />)}
+  {shipments && shipments.length > 0 ? (
+    shipments.map(s => <WaybillRow key={s.id} shipment={s} />)
+  ) : (
+    <tr>
+      <td colSpan="6" style={{ textAlign: 'center', padding: '20px', color: '#999' }}>
+        No active shipments. Please upload a CSV.
+      </td>
+    </tr>
+  )}
+</tbody>
+              
             </tbody>
           </table>
         </section>
