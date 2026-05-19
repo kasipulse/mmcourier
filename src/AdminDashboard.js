@@ -30,7 +30,7 @@ const AdminDashboard = () => {
         </section>
 
         <section style={styles.manifestPanel}>
-          <h2 style={styles.panelTitle}>ACTIVE MANIFEST</h2>
+          <h2 style={styles.panelTitle}>ACTIVE MANIFEST ({shipments.length})</h2>
           <table style={styles.table}>
             <thead>
               <tr style={styles.tableHeader}>
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
               ) : (
                 <tr>
                   <td colSpan="6" style={{ textAlign: 'center', padding: '20px', color: '#999' }}>
-                    No active shipments found.
+                    No active shipments found. Upload a CSV to start.
                   </td>
                 </tr>
               )}
